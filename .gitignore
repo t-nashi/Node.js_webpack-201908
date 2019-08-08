@@ -1,0 +1,5 @@
+# commit対象にさせないファイルパス
+node_modules/
+public/js/*
+public/css/*
+public/images/*

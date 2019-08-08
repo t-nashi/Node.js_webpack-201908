@@ -1,0 +1,100 @@
+/* layout */
+
+// パーツの配置や、ラッパーとしての幅や高さなどを決定するクラス
+// 接頭辞としてl-をつける
+
+#wrapper {
+	word-wrap: break-word;
+	background-color: #fff;
+}
+
+#header {
+	//
+}
+
+#content {
+	@extend .box-sizing;
+	display: flex;
+	// flex-wrap: wrap;		// 横幅足らないときは無理せず段落落ち
+	@include mq-down(md) {
+		display: inline-block;
+	}
+}
+
+	#content-main {
+		border-radius: 5px;
+		@extend .box-sizing;
+		order: 1;
+		flex-grow: 1;
+	}
+
+	#content-side {
+		border-radius: 5px;
+		@extend .box-sizing;
+		order: 2;
+		width: 200px;
+		@include mq-down(md) {
+			margin-left: 10px;
+			width: auto;
+		}
+		@include mq-up(lg) {
+			width: 300px;
+		}
+	}
+
+#footer {
+	@extend .box-sizing;
+}
+
+// dataURI検証
+.ico_heart:before {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	background-image: url(../images/datauri/heart.png);
+	background-size: contain;
+	content: "";
+	margin-right: 0.2em;
+}
+
+.l-list-img {
+	display: flex;
+	flex-wrap: wrap;		// 横幅足らないときは無理せず段落落ち
+	img {
+		width: 300px;
+		@include mq-down(sm) {
+			width: 100%;
+		}
+	}
+
+	// 背景画像検証
+	.sample-img {
+		position: relative;
+		width: 300px;
+		// width: 512px;
+		// height: 384px;
+		@include mq-down(sm) {
+			width: 100%;
+		}
+
+		&:before {
+			content:"";
+			display: block;
+			padding-top: 75%;	// 高さを幅の75%に固定
+			// 高さの比率 ÷ 幅の比率 × 100（4:3 = 3/4*100 --> 75）
+		}
+
+		> div {
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+
+			background: transparent url(../images/sample.jpg) center center no-repeat;
+			background-size: contain;
+		}
+	}
+
+
+}

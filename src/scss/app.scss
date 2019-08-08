@@ -1,0 +1,12 @@
+@charset "utf-8";
+@import "~node-reset-scss/scss/_reset";
+// @import "~bootstrap/scss/bootstrap";
+// @import "_reset-css-remedy";
+
+// sass-mixin(function)
+@import "_mixins";
+
+@import "flou/_foundation";
+@import "flou/_layout";
+@import "flou/_object";
+@import "flou/_utility";

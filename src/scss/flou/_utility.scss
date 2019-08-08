@@ -1,0 +1,61 @@
+/* utility */
+
+// 調整用のクラス
+// margin、padding、font-size、colorなどを付与するのに使用
+// 他種類のパーツ間の空き調整や、パーツとして認められないような、自由な振る舞いをする要素に対してはこちらのクラスを使用
+// 接頭辞としてu-をつける
+
+// 色定義
+$colors: (
+	1: #1abc9c,
+	2: #2ecc71,
+	3: #3498db,
+	4: #9b59b6,
+	5: #34495e,
+	6: #f1c40f,
+	7: #e67e22,
+	8: #e74c3c,
+	9: #ecf0f1,
+	10: #95a5a6,
+);
+@function colors($key) {
+	@return map-get($colors, $key);
+}
+
+.border-1 {
+	border: 1px solid #aaa;
+}
+
+.box-sizing {
+	box-sizing: border-box; // paddingとborderサイズを加味したwidth/heightにする
+}
+
+@for $i from 1 through 20 {
+	.m-#{$i} { margin: #{$i}px; }
+	.mt-#{$i} { margin-top: #{$i}px; }
+	.mr-#{$i} { margin-right: #{$i}px; }
+	.mb-#{$i} { margin-bottom: #{$i}px; }
+	.ml-#{$i} { margin-left: #{$i}px; }
+
+	.p-#{$i} { padding: #{$i}px; }
+	.pt-#{$i} { padding-top: #{$i}px; }
+	.pr-#{$i} { padding-right: #{$i}px; }
+	.pb-#{$i} { padding-bottom: #{$i}px; }
+	.pl-#{$i} { padding-left: #{$i}px; }
+}
+
+.border-top-0 { border-top: none; }
+.border-right-0 { border-right: none; }
+.border-bottom-0 { border-bottom: none; }
+.border-left-0 { border-left: none; }
+
+.mt-0 { margin-top: 0px; }
+.mr-0 { margin-right: 0px; }
+.mb-0 { margin-bottom: 0px; }
+.ml-0 { margin-left: 0px; }
+
+.pt-0 { padding-top: 0px; }
+.pr-0 { padding-right: 0px; }
+.pb-0 { padding-bottom: 0px; }
+.pl-0 { padding-left: 0px; }
+

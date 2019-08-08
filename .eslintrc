@@ -1,0 +1,22 @@
+{
+	// 【eslint-loaderの構文チェックのための設定ファイル】 ※webpack.config.js でも設定あり
+	// "root": true,						// このプロジェクト内のみに適用 (デフォルトは親ディレクトリまで遡って適用する)
+	"extends": "eslint:recommended",		// https://eslint.org/docs/rules/ でチェックマークが付いた推奨設定を適用
+	"rules": {
+		"indent": [ 2, "tab" ],					// スペースの数。タブなら tab と書く
+		// "linebreak-style": [ 2, "unix" ],	// 改行コードが /n でないとエラー
+		"semi": [ 2, "always" ],			// セミコロン無しの文はエラー
+		"quotes": [ 2, "single" ]			// クォーテーションが"でないとエラー（single | double）
+	},
+	"env": {								// 適用する環境 (該当の環境に合わせた設定群が適用される)
+		"es6": true,
+		"node": true,
+		"browser": true,
+		"jquery": true
+	},
+	"parserOptions": {
+		"ecmaVersion": 6,
+		"sourceType": "module"
+	}
+
+}

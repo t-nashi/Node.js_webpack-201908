@@ -1,0 +1,88 @@
+// このプロジェクトは工事中です。まだリリースの準備はできていません。 2019年2月11日現在。
+// https://coliss.com/articles/build-websites/operation/css/cssremedy.html
+
+* { box-sizing: border-box; } // box-sizingをborder-boxに切り替える。
+
+// ユーザーがスマホを「視差効果を減らす」に設定（prefers-reduced-motion）している場合は、アニメーションの終わりまですぐにジャンプさせます。
+// これは意図しない結果につながる可能性があります。必要に応じて削除し、prefers-reduced-motionのために適切なスタイルを定義してください。
+@​media (prefers-reduced-motion: reduce) {
+	* {
+		animation-duration: 0.001s !important;
+		transition-duration: 0.001s !important;
+	}
+}
+
+body {
+	margin: 0; // ページの端の周りの小さなスペースを削除。
+}
+
+// タイポグラフィにrem単位を使用するよう切り替えます。見出しのline-heightを修正。
+h1 {
+	font-size: 2rem; // すべてのH1は大きくし、入れ子でサイズが縮小されるのを削除。
+	margin: 0.67em 0;
+}
+h2 {
+	font-size: 1.5rem;
+}
+h3 {
+	font-size: 1.17rem;
+}
+h4 {
+	font-size: 1.00rem;
+}
+h5 {
+	font-size: 0.83rem;
+}
+h6 {
+	font-size: 0.67rem;
+}
+
+h2, h3, h4, h5, h6{
+	line-height: 1;
+}
+
+// line-heightを広げ、リーダビリティを向上させる。
+p {
+	line-height: 1.5; 
+}
+
+
+pre { 
+	white-space: pre-wrap; // デフォルトのoverflowは好ましくありません。
+}
+
+
+// 各ブラウザは、現在のリストのmargin, paddingと一致していま
+	See: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation  */
+nav ul {
+	list-style: none;
+}
+
+ 
+img {
+	border-style: none; // IE10以前のリンク画像の枠線を削除。
+	vertical-align: bottom;  // ディセンダにより生じる画像の隙間を修正。
+	display: block; // ブロックに切り替えます。通常の画像に必要な操作です。
+	max-width: 100%; // デフォルトで画像をフレキシブルに。
+	height: auto; // max-widthが有効になっても、画像のアスペクト比を維持。
+}
+
+
+// 英語では、q要素のスタイルを定義するときに、直線引用符ではなく、波引用符を使用してください。
+
+// このコードは、quotes.cssファイルに記述されています。
+
+
+// まだ広くサポートされていない最新のプロパティもサポートし
+	 初期値が最良ではないため、適した値を定義します。
+*/
+
+// 一貫した行間隔を定義。
+:root {
+	line-sizing: normal;
+}
+
+// CJK言語（中国語、日本語、韓国語）での句読点の間隔を変更。
+:root {
+	text-spacing: trim-start allow-end trim-adjacent ideograph-alpha ideograph-numeric;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Bootstrap4_InitialTemplate</title>
+
+<!-- meta -->
+<meta name="keywords" content="xxxxx,xxxxx,xxxxx">
+<meta name="description" content="xxxxx">
+<meta name="robots" content="noindex,nofollow"><!-- ページを検索対象にするときはこの記述を消す -->
+<meta name="author" content="xxxxx">
+<meta name="copyright" content="Copyright xxxxx 20xx. All Rights Reserved.">
+
+<!-- icon -->
+<!-- 16x16 or 32x32 -->
+<!-- <link rel="shortcut icon" href="favicon.ico"> -->
+<!-- 57x57 for older iPhones, 72x72 for iPads, 114x114 for iPhone4's retina display -->
+<!-- <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
+
+<!-- link file -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+<!-- <link href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css" rel="stylesheet" type="text/css"> -->
+
+<link href="css/style.css" rel="stylesheet" type="text/css">
+
+<script>
+/* JavaScript*/
+</script>
+<style>
+/* CSS */
+</style>
+</head>
+<body class="bg-warning">
+<div class="container-fluid px-0">
+	<h1 class="text-center border border-dark border-top-0 border-left-0 border-right-0 p-2">Bootstrap4_InitialTemplate</h1>
+	<h1>◆ container-fluid と no-gutters で幅ぴったり</h1>
+	<div class="row no-gutters">
+		<div class="col-1 col-sm-2 col-md-3 col-lg-4 col-xl-5 bg-primary">
+			カラムA
+		</div>
+		<div class="col-2 col-sm-3 col-md-4 col-lg-5 col-xl-6 bg-secondary">
+			カラムB
+		</div>
+		<div class="col-9 col-sm-7 col-md-5 col-lg-3 col-xl-1 bg-success">
+			カラムC
+		</div>
+		<div class="col-12">
+			<ul class="">
+				<li><span class="d-sm-none">◆</span>col-# auto</li>
+				<li><span class="d-none d-sm-inline-block d-md-none">◆</span>col-sm-# 576px</li>
+				<li><span class="d-none d-md-inline-block d-lg-none">◆</span>col-md-# 768px</li>
+				<li><span class="d-none d-lg-inline-block d-xl-none">◆</span>col-lg-# 992px</li>
+				<li><span class="d-none d-xl-inline-block">◆</span>col-xl-# 1200px</li>
+			</ul>
+			<p>・col-1 col-sm-2 col-md-3 col-lg-4 col-xl-5</p>
+			<p>・col-2 col-sm-3 col-md-4 col-lg-5 col-xl-6</p>
+			<p>・col-9 col-sm-7 col-md-5 col-lg-3 col-xl-1</p>
+		</div>
+	</div>
+</div>
+
+<div class="container mt-4">
+	<h1>◆ container と row のデフォルト設定</h1>
+	<div class="row">
+		<div class="col-2 bg-primary">
+			カラムA
+		</div>
+		<div class="col-2 bg-secondary">
+			カラムB
+		</div>
+		<div class="col-8 bg-success">
+			カラムC
+		</div>
+		<div class="col-12">
+			<ul class="">
+				<li><span class="d-sm-none">◆</span>col-# auto</li>
+				<li><span class="d-none d-sm-inline-block d-md-none">◆</span>col-sm-# 576px（540px）</li>
+				<li><span class="d-none d-md-inline-block d-lg-none">◆</span>col-md-# 768px（720px）</li>
+				<li><span class="d-none d-lg-inline-block d-xl-none">◆</span>col-lg-# 992px（960px）</li>
+				<li><span class="d-none d-xl-inline-block">◆</span>col-xl-# 1200px（1140px）</li>
+			</ul>
+			<p>row … margin-right: -15px; margin-left: -15px;</p>
+		</div>
+	</div>
+</div>
+
+
+<!-- jQueryもバンドルされたファイル -->
+<script src="js/bundle.js"></script>
+</body>
+</html>
