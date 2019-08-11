@@ -2,13 +2,7 @@
 webpackで画像圧縮も出来るようにした
 
 
-## Other Repositories
-* gulp-imagemin-ver： https://github.com/t-nashi/Node.js_img-min-201904
-* old-webpack-ver： https://github.com/t-nashi/Node.js_webpack-201902
-<br><br><br>
-
-
-## プラグイン
+## 使用プラグイン
 **▼ [Node.js_webpack-201902](https://github.com/t-nashi/Node.js_webpack-201902) からインストールされていたもの**
 <table>
 	<tr>
@@ -156,6 +150,12 @@ webpackで画像圧縮も出来るようにした
 
 <br><br><br>
 
+
+
+## Other Repositories
+* gulp-imagemin-ver： https://github.com/t-nashi/Node.js_img-min-201904
+* old-webpack-ver： https://github.com/t-nashi/Node.js_webpack-201902
+<br><br><br>
 
 
 
