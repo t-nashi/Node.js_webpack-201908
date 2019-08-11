@@ -127,30 +127,32 @@ webpackで画像圧縮も出来るようにした
 	</tr>
 	<tr>
 		<td><b>imagemin-gifsicle</b></td>
-		<td>gif画像圧縮用<small>（基本はimageminとセットで使うという認識で良い？）</small></td>
+		<td>gif画像圧縮用</td>
 	</tr>
 	<tr>
 		<td><b>imagemin-keep-folder</b></td>
-		<td>画像圧縮前と圧縮後のディレクトリ構造を保持する<small>（基本はimageminとセットで使うという認識で良い？）</small></td>
+		<td>画像圧縮前と圧縮後のディレクトリ構造を保持する</td>
 	</tr>
 	<tr>
 		<td><b>imagemin-mozjpeg</b></td>
-		<td>jpg画像圧縮用<small>（基本はimageminとセットで使うという認識で良い？）</small></td>
+		<td>jpg画像圧縮用</td>
 	</tr>
 	<tr>
 		<td><b>imagemin-pngquant</b></td>
-		<td>png画像圧縮用<small>（基本はimageminとセットで使うという認識で良い？）</small></td>
+		<td>png画像圧縮用</td>
 	</tr>
 	<tr>
 		<td><b>imagemin-svgo</b></td>
-		<td>svg画像圧縮用<small>（基本はimageminとセットで使うという認識で良い？）</small></td>
+		<td>svg画像圧縮用</td>
 	</tr>
 	<tr>
 		<td><b>imagemin-webpack-plugin</b></td>
-		<td>webpack内で画像圧縮（imagemin）するための基盤<small>（jpegtran、pngquant、gifsicle、svgo が初期から使える。その他の圧縮は plugins 指定で設定できる）</small></td>
+		<td>
+			webpack内で画像圧縮（imagemin）するための基盤
+			（jpegtran、pngquant、gifsicle、svgo が初期から使える。その他の圧縮は plugins 指定で設定できる）
+		</td>
 	</tr>
 </table>
-
 
 <br><br><br>
 
