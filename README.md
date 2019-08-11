@@ -148,7 +148,7 @@ webpackで画像圧縮も出来るようにした
 	<tr>
 		<td><b>imagemin-webpack-plugin</b></td>
 		<td>
-			webpack内で画像圧縮（imagemin）するための基盤
+			webpack内で画像圧縮（imagemin）するための基盤<br>
 			（jpegtran、pngquant、gifsicle、svgo が初期から使える。その他の圧縮は plugins 指定で設定できる）
 		</td>
 	</tr>
