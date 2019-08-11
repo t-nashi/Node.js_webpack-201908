@@ -117,9 +117,8 @@ webpackで画像圧縮も出来るようにした
 	</tr>
 </table>
 
-
+<br>
 **▼ 今回インストールしたもの**
-
 <table>
 	<tr>
 		<td><b>imagemin</b></td>
