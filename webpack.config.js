@@ -139,11 +139,12 @@ module.exports = {
 					options: {
 							// limitのbyte数以下はBase64化、以上は画像参照 ※file-loaderが必要
 							limit: 8192,
-							name: '[name].[ext]',
+							// name: '[name].[ext]',
+							name: '../images/[name].[ext]'
 							// outputPath : 'images/',
-							publicPath : function(path){
-								return '../images/' + path;
-							}
+							// publicPath : function(path){
+							// 	return '../images/' + path;
+							// }
 					}
 				}
 			},
@@ -176,6 +177,7 @@ module.exports = {
 		new ExtractTextPlugin('[name]'),
 		// new CopyWebpackPlugin([{from: './public'}]),
 		// ファイルを構造を維持してコピー
+		// └ src/images内
 		new CopyWebpackPlugin(
 			[{
 				from: '',
@@ -188,6 +190,30 @@ module.exports = {
 			}],
 			{ context: 'src/images' }
 		),
+		// └ src/_public-root内（編集対象ファイルをsrcに集約させるための処置）
+		new CopyWebpackPlugin(
+			[{
+				from: '',
+				to: '',
+				ignore: [
+					//'!*.html'
+					'*.{html}',
+					'!index.html'
+				]
+			}],
+			{ context: 'src/_public-root' }
+		),
+		// └ public/css内のstyle.cssを特定の場所へコピー（最終的なファイルを任意の場所にコピーしたいときの例）
+		// new CopyWebpackPlugin(
+		// 	[{
+		// 		from: '',
+		// 		to: '../../public/wp-content/themes/tech/',
+		// 		ignore: [
+		// 			'!style.css'
+		// 		]
+		// 	}],
+		// 	{ context: 'public/css' }
+		// ),
 
 		// 画像圧縮
 		new ImageminPlugin({
@@ -240,12 +266,12 @@ module.exports = {
 			// options.plugins
 				// type: Array default: []
 
-		// jQuery
-		new webpack.ProvidePlugin({
-			$: 'jquery',
-			jQuery: 'jquery',
-			'window.jQuery': 'jquery'
-		}),
+		// jQueryをjsファイルにバンドルする（app.jsでも読み込み設定可能）
+		// new webpack.ProvidePlugin({
+		// 	$: 'jquery',
+		// 	jQuery: 'jquery',
+		// 	'window.jQuery': 'jquery'
+		// }),
 
 		// browsersync設定（$ npm run webpack --watchの時に有効）
 		new BrowserSyncPlugin({

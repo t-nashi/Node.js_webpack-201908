@@ -1,0 +1,11 @@
+
+.l-sidebar {
+	// padding-bottom: 30px;
+	width: auto;
+	@include mq-up(xl) {// 1200px以上
+		margin-top: 30px;
+		// padding-bottom: 30px;
+		margin-bottom: 30px;
+		width: $contents-width-side;
+	}
+}

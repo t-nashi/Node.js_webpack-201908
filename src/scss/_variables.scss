@@ -1,0 +1,133 @@
+//
+// colors - theme
+//
+$color-primary: #E75A7F;
+$color-primary-active: #BE4968;
+
+$color-secondary: #000;
+$color-secondary-active: #000;
+
+$color-black: #000;
+$color-gray-dark-2: #000;
+$color-gray-dark-1: #000;
+$color-gray-0: #000;
+$color-gray-light-1: #000;
+$color-gray-light-2: #000;
+$color-white: #FFF;
+
+$color-warning: #000;
+$color-danger: #000;
+
+//
+// colors - target
+//
+$color-text: #666;
+$color-text-link: #5EA6E9;
+$color-text-link-active: #96C4EB;
+
+$color-text-selection: #B8DDFF;
+$color-text-orange: #FF6920;
+$color-text-pink: #FF1E92;
+
+$color-text-copylight: #DDD;
+
+// headerのサイトタイトル
+$color-text-gray-1: #DDD;
+// headerのサイトサブタイトル
+$color-text-gray-2: #888;
+
+$color-text-gray-3: #AAA;
+
+// moreの背景
+$color-bg-more: #FBFBFB;
+$color-bg-more-active: #F0F0F0;
+
+// tag-cloudの背景
+$color-bg-tag-cloud: #FBFBFB;
+$color-bg-tag-cloud-active: #F0F0F0;
+
+$color-bg-box: #F6F6F6;
+
+$color-border-dark: #F0F0F0;
+$color-border-light: #DDD;
+
+$color-bg-wrapper: #EDEDED;
+$color-bg-header: #333;
+$color-bg-main-column: #FFF;
+$color-bg-side-column-top: #FFF;
+$color-bg-footer: #333;
+
+$color-transparent: rgba(0,0,0,0);
+
+$color-bg-debug: rgba(255,0,0,0.3);
+
+//
+// colors - sns
+//
+$color-bg-twitter: #33CCFF;
+$color-bg-twitter-active: #13ACDF;
+$color-bg-facebook: #3B5998;
+$color-bg-facebook-active: #1B3978;
+$color-bg-gplus: #C63D2D;
+$color-bg-gplus-active: #A61D0D;
+$color-bg-vkontakte: #2C6EBD;
+$color-bg-vkontakte-active: #0C4E9D;
+$color-bg-pocket: #EE4056;
+$color-bg-pocket-active: #CE2036;
+$color-bg-line: #00B900;
+$color-bg-line-active: #009A00;
+
+//
+// width - contents
+//
+$contents-width-containar: 980px;
+$contents-width-containar-xl: 1070px;
+$contents-width-containar-xxl: 1366px;
+
+$contents-width-main: 640px;
+$contents-width-main-xl: 740px;
+$contents-width-main-xxl: 1036px;
+
+$contents-width-side: 300px;
+
+// 375x667（iPhone 8）
+// 768x1024（iPad - Portrait）
+// 992x1024（PC - 小）
+// 1200x1080（PC - 大）
+// 1400x1080（PC - 大大）
+
+// width - breakpoint
+$breakpoint-width-ss: 340px;
+$breakpoint-width-sg: 360px;
+$breakpoint-width-sm: 576px;
+$breakpoint-width-md: 768px;		// ↓ ここから検索窓・グローバルメニュー出現、続きを読む
+$breakpoint-width-lg: 992px;
+$breakpoint-width-xl: 1200px;		// ↓ ここから2カラム
+$breakpoint-width-xxl: 1400px;		// ↓ 2カラム、幅大
+
+$breakpoint-width-ss-down: ($breakpoint-width-ss - 1);
+$breakpoint-width-sg-down: ($breakpoint-width-sg - 1);
+$breakpoint-width-sm-down: ($breakpoint-width-sm - 1);
+$breakpoint-width-md-down: ($breakpoint-width-md - 1);
+$breakpoint-width-lg-down: ($breakpoint-width-lg - 1);
+$breakpoint-width-xl-down: ($breakpoint-width-xl - 1);
+$breakpoint-width-xxl-down: ($breakpoint-width-xxl - 1);
+
+$header-md-height: 60px;
+
+// 色定義
+$colors: (
+	1: #1abc9c,
+	2: #2ecc71,
+	3: #3498db,
+	4: #9b59b6,
+	5: #34495e,
+	6: #f1c40f,
+	7: #e67e22,
+	8: #e74c3c,
+	9: #ecf0f1,
+	10: #95a5a6,
+);
+@function colors($key) {
+	@return map-get($colors, $key);
+}

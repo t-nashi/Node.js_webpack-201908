@@ -1,0 +1,6 @@
+
+// font-size
+@for $i from 1 through 60 {
+	$j: ($i/10);
+	.b-#{$i} { font-size: #{$j}rem !important; }
+}

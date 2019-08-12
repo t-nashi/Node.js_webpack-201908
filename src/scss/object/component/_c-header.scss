@@ -1,0 +1,16 @@
+// l-header 直下
+.c-header {
+	width: auto;
+	height: inherit;
+	margin: 0 auto;
+
+	@include mq-up(md) {
+		// 
+	}
+	@include mq-up(xl) {// 1200px以上（PC - 大）
+		width: $contents-width-containar-xl;
+	}
+	@include mq-up(xxl) {// 1400px以上（PC - 大大）
+		width: $contents-width-containar-xxl;
+	}
+}

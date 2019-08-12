@@ -1,3 +1,60 @@
+// 変数の定義
+// min-width
+$breakpoint-up: (
+	'ss': 'screen and (min-width: #{$breakpoint-width-ss})',
+	'sg': 'screen and (min-width: #{$breakpoint-width-sg})',
+	'sm': 'screen and (min-width: #{$breakpoint-width-sm})',
+	'md': 'screen and (min-width: #{$breakpoint-width-md})',
+	'lg': 'screen and (min-width: #{$breakpoint-width-lg})',
+	'xl': 'screen and (min-width: #{$breakpoint-width-xl})',
+	'xxl': 'screen and (min-width: #{$breakpoint-width-xxl})',
+) !default;
+
+// max-width
+$breakpoint-down: (
+	'ss': 'screen and (max-width: #{$breakpoint-width-ss-down})',
+	'sg': 'screen and (max-width: #{$breakpoint-width-sg-down})',
+	'sm': 'screen and (max-width: #{$breakpoint-width-sm-down})',
+	'md': 'screen and (max-width: #{$breakpoint-width-md-down})',
+	'lg': 'screen and (max-width: #{$breakpoint-width-lg-down})',
+	'xl': 'screen and (max-width: #{$breakpoint-width-xl-down})',
+	'xxl': 'screen and (max-width: #{$breakpoint-width-xxl-down})',
+) !default;
+
+// @mixinの定義
+@mixin mq-up($breakpoint: md) {
+	@media #{map-get($breakpoint-up, $breakpoint)} {
+		@content;
+	}
+}
+
+@mixin mq-down($breakpoint: md) {
+	@media #{map-get($breakpoint-down, $breakpoint)} {
+		@content;
+	}
+}
+
+// 使い方
+// 基本的にはモバイルファーストの考えのもと、up形式（例：768px以上～）でstyleを上書きしていく
+
+// $breakpoint-width-ss: 340px;
+// $breakpoint-width-sg: 360px;
+// $breakpoint-width-sm: 576px;
+// $breakpoint-width-md: 768px;		// ↓ ここから検索窓・グローバルメニュー出現、続きを読む
+// $breakpoint-width-lg: 992px;
+// $breakpoint-width-xl: 1200px;		// ↓ ここから2カラム
+// $breakpoint-width-xxl: 1400px;		// ↓ 2カラム、幅大
+
+// @include mq-up(xxl) {}// 1400px以上（PC - 大大）
+// @include mq-down(xxl) {}// 1400px以下
+// @include mq-down(lg) {}// 992px以下
+// @include mq-down(md) {}// 768px以下
+// @include mq-down(sm) {}// 576px以下
+// @include mq-down(sg) {}// 360px以下
+
+// ==========================================================================
+// memo
+// ==========================================================================
 // sassの変数
 // メディアクエリ
 // $breakpoint-tablet: 980px;
@@ -17,48 +74,6 @@
 
 // https://www.tam-tam.co.jp/tipsnote/html_css/post10708.html
 
-// 変数の定義
-// min-width
-$breakpoint-up: (
-	'ss': 'screen and (min-width: 340px)',
-	'sg': 'screen and (min-width: 360px)',
-	'sm': 'screen and (min-width: 576px)',
-	'md': 'screen and (min-width: 768px)',
-	'lg': 'screen and (min-width: 992px)',
-	'xl': 'screen and (min-width: 1200px)',
-) !default;
-
-// max-width
-$breakpoint-down: (
-	'ss': 'screen and (max-width: 339px)',
-	'sg': 'screen and (max-width: 359px)',
-	'sm': 'screen and (max-width: 575px)',
-	'md': 'screen and (max-width: 767px)',
-	'lg': 'screen and (max-width: 991px)',
-	'xl': 'screen and (max-width: 1119px)',
-) !default;
-
-// @mixinの定義
-@mixin mq-up($breakpoint: md) {
-	@media #{map-get($breakpoint-up, $breakpoint)} {
-		@content;
-	}
-}
-
-@mixin mq-down($breakpoint: md) {
-	@media #{map-get($breakpoint-down, $breakpoint)} {
-		@content;
-	}
-}
-
-
-$ss: 340px;
-$sg: 360px;
-$sm: 576px;
-$md: 768px;
-$lg: 992px;
-$xl: 1200px;
-
 // @mixin mq-max($break-point) {
 // 	@media screen and (max-width: $break-point) {
 // 		@content;
@@ -71,16 +86,22 @@ $xl: 1200px;
 // 	}
 // }
 
-@mixin screen($break-point-min, $break-point-max) {
-	@media screen and (min-width: $break-point-min) and (max-width: $break-point-max) {
-		@content;
-	}
-}
+// @mixin screen($break-point-min, $break-point-max) {
+// 	@media screen and (min-width: $break-point-min) and (max-width: $break-point-max) {
+// 		@content;
+// 	}
+// }
 
-// commitテストのためのコメント入れ
+// 375x667（iPhone 8）
+// 768x1024（iPad - Portrait）
+// 992x1024（PC - 小）
+// 1200x1080（PC - 大）
+// 1400x1080（PC - 大大）
 
-
-
-
-
-
+// $ss: 340px;
+// $sg: 360px;
+// $sm: 576px;
+// $md: 768px;
+// $lg: 992px;
+// $xl: 1200px;
+// $xxl: 1400px;

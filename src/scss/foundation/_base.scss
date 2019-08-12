@@ -1,0 +1,97 @@
+// set html5 elements to block
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { 
+	display: block;
+}
+
+// box-sizing - paddingやborderに依存しないwidthやheight指定
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+         -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+// ************************************************************************************
+// GENERAL SETTING
+// ************************************************************************************
+html {
+	font-size: 62.5%;		// 10px = 1rem
+
+	// disable webkit text size adjust
+	-webkit-text-size-adjust: 100%;
+}
+body {
+	// font: 16px/1.8 "メイリオ",Meiryo,"Helvetica Neue",Helvetica,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","ＭＳ Ｐゴシック","MS PGothic",Arial,sans-serif;
+	font: 1.6rem/1.8 "メイリオ",Meiryo,"Helvetica Neue",Helvetica,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","ＭＳ Ｐゴシック","MS PGothic",Arial,sans-serif;
+	color: $color-text;
+	background-color: $color-bg-wrapper;
+	&.menu-active {
+		overflow: hidden;
+	}
+}
+
+a {
+	color: $color-text-link;
+	text-decoration: none;
+	outline: none;
+	&:hover {
+		text-decoration: underline;
+		color: $color-text-link-active;
+	}
+}
+
+a:hover img {
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+	-ms-filter: "alpha(opacity=70)";
+}
+
+b { font-weight: bold; }
+
+p { }
+
+ul, ol { }
+
+li { }
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+}
+
+// h1 { font-size: 3.2rem; }
+// h2 { font-size: 2.6rem; }
+// h3 { font-size: 2.2rem; }
+// h4 { font-size: 2.0rem; }
+// h5 { font-size: 1.8rem; }
+// h6 { font-size: 1.6rem; }
+
+small { font-size: small; }
+
+// Selected Text
+::selection { background: $color-text-selection; } // Safari
+::-moz-selection { background: $color-text-selection; } // Firefox
+
+.border-1 {
+	border: 1px solid #aaa;
+}
+
+.box-sizing {
+	box-sizing: border-box; // paddingとborderサイズを加味したwidth/heightにする
+}
+
+.border-top-0 { border-top: none; }
+.border-right-0 { border-right: none; }
+.border-bottom-0 { border-bottom: none; }
+.border-left-0 { border-left: none; }
+
+.mt-0 { margin-top: 0px; }
+.mr-0 { margin-right: 0px; }
+.mb-0 { margin-bottom: 0px; }
+.ml-0 { margin-left: 0px; }
+
+.pt-0 { padding-top: 0px; }
+.pr-0 { padding-right: 0px; }
+.pb-0 { padding-bottom: 0px; }
+.pl-0 { padding-left: 0px; }
+

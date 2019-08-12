@@ -1,0 +1,13 @@
+
+// padding, margin
+@for $i from 0 through 12 {
+	$j: ($i*5);
+	.pt-#{$j} { padding-top: #{$j}px !important; }
+	.pb-#{$j} { padding-bottom: #{$j}px !important; }
+	.pl-#{$j} { padding-left: #{$j}px !important; }
+	.pr-#{$j} { padding-right: #{$j}px !important; }
+	.mt-#{$j} { margin-top: #{$j}px !important; }
+	.mb-#{$j} { margin-bottom: #{$j}px !important; }
+	.ml-#{$j} { margin-left: #{$j}px !important; }
+	.mr-#{$j} { margin-right: #{$j}px !important; }
+}

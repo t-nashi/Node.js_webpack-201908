@@ -1,0 +1,10 @@
+
+.l-header {
+	background-color: $color-bg-header;
+	width: 100%;
+	height: 60px;
+
+	@include mq-up(md) {// 768px以上（iPad - Portrait）
+		height: 120px;
+	}
+}

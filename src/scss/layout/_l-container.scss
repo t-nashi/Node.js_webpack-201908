@@ -1,0 +1,26 @@
+// main・asideを囲ってるdiv
+.l-container {
+	width: auto;
+}
+
+@include mq-up(md) {
+	.l-container {
+		padding-top: 0;
+	}
+}
+
+@include mq-up(xl) {// 1200px以上
+	// width: $contents-width-containar; // 980px
+
+	.l-container {
+		width: $contents-width-containar-xl;
+		margin: 0 auto;
+	}
+	.l-container__inner {
+		display: flex;
+	}
+}
+
+@include mq-up(xxl) {// 1400px以上（PC - 大大）
+	.l-container { width: $contents-width-containar-xxl; }
+}

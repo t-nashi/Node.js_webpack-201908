@@ -1,0 +1,9 @@
+
+.l-footer {
+	height: 60px;
+	background-color: $color-bg-footer;
+
+	@include mq-up(md) {
+		height: 120px;
+	}
+}

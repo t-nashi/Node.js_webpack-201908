@@ -1,0 +1,34 @@
+
+// ************************************************************************************
+// DEBUG
+// ************************************************************************************
+.l-header {
+	background-color: rgba(255,0,0,.2);
+	.c-header {
+		background-color: rgba(255,0,0,.2);
+		.c-header__inner {
+			// 
+		}
+	}
+}
+
+.l-container {
+	.l-container__inner {
+		background-color: rgba(255,0,0,.1);
+		.l-main {
+			background-color: rgba(0,255,0,.2);
+		}
+		.l-sidebar {
+			.c-sidebar {
+				background-color: rgba(0,0,255,.2);
+			}
+		}
+	}
+}
+
+.l-footer {
+	background-color: rgba(255,0,0,.2);
+	.c-footer {
+		background-color: rgba(255,0,0,.2);
+	}
+}

@@ -1,0 +1,14 @@
+
+.c-footer {
+	height: inherit;
+	@include mq-up(md) {
+		// 
+	}
+	@include mq-up(xl) {// 1200px以上
+		width: $contents-width-containar-xl;
+		margin: 0 auto;
+	}
+	@include mq-up(xxl) {// 1400px以上（PC - 大大）
+		width: $contents-width-containar-xxl;
+	}
+}
