@@ -105,7 +105,7 @@ webpackで画像圧縮も出来るようにした
 	</tr>
 	<tr>
 		<td><b>popper.js</b></td>
-		<td>bootstrap拡張？</td>
+		<td>Bootstrap4から追加された依存ライブラリ</td>
 	</tr>
 	<tr>
 		<td><b>postcss-load</b></td>  
