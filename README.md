@@ -4,7 +4,7 @@ webpackで画像圧縮も出来るようにした
 <br><br><br>
 
 
-## 何が出来るのか・何が実行されるか
+## 何が出来るのか・何が実行されるか、サンプルの仕様など
 * sass（SCSS記法）をcssへ変換＆バンドル（src/scss/ → public/css）
 * js の ES6（ES2015 | ECMAScript2015）を ES5 へ変換（Babelでトランスパイラ）＆バンドル（src/js/ → public/js）
 * 画像を圧縮（jpg|jpeg|png|gif|svg）（src/images/ → public/images）
