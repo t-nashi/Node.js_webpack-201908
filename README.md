@@ -8,19 +8,18 @@ webpackで画像圧縮も出来るようにした
 * sass（SCSS記法）をcssへ変換＆バンドル（src/scss/ → public/css）
 * js の ES6（ES2015 | ECMAScript2015）を ES5 へ変換（Babelでトランスパイラ）＆バンドル（src/js/ → public/js）
 * 画像を圧縮（jpg|jpeg|png|gif|svg）（src/images/ → public/images）
+* 「src/images/datauri」内の8kb以下の参照されてる画像はbase64（data-uri）として参照先のファイル内にコード記述される
 * 「src/_public-root/index.html → public/index.html」コピー
 * **npm run watch** で↑ 上記の内容を実行 ＆ srcフォルダ監視 ＆ browser-syncでpublicフォルダ内のindex.htmlをブラウザでリアルタイム表示
 * **npm run build** で↑ 上記の内容を実行（jsとcssファイルはminify化）
 * **npm run imagemin** で画像を圧縮（jpg|jpeg|png|gif|svg）（src/images/ → public/images）
-* CSS設計|構成案は[FLOCSS](https://github.com/hiloki/flocss)を採用したsassサンプルを用意
-* └ 命名規則 - ケバブケース（チェインケース）
-* └ 命名規則 - MindBEMding … BEMシステムのシンタックスである、Block、Element、Modifierに分類して構成される規則を採用
-* 
-* 
-* 
-* 
-* 
-* 
+* CSS設計|構成案は [FLOCSS](https://github.com/hiloki/flocss) を採用したsassサンプルを用意
+* └【命名規則・コーディング規則】
+* └ MindBEMding … BEMシステムのシンタックスである、Block、Element、Modifierに分類して構成される規則を採用
+* └ ケバブケース（チェインケース）を基本とする ※MindBEMdingで一部スネークケースを使用
+* └ カラーコードは大文字、省略可能な時は省略する
+* └ インデントスペースはタブを使用（半角スペース2つ分で表示させるのが理想）
+* └ marginで左右、もしくは上下に余白が必要な際は要素に対して「左・上」を基準とする
 
 <br><br><br>
 
