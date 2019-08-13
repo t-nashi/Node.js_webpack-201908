@@ -4,7 +4,7 @@ webpackで画像圧縮も出来るようにした
 <br><br><br>
 
 
-## 何が出来るのか・
+## 何が出来るのか・何が実行されるか
 * sass（SCSS記法）をcssへ変換＆バンドル（src/scss/ → public/css）
 * js の ES6（ES2015 | ECMAScript2015）を ES5 へ変換（Babelでトランスパイラ）＆バンドル（src/js/ → public/js）
 * 画像を圧縮（jpg|jpeg|png|gif|svg）（src/images/ → public/images）
@@ -12,6 +12,14 @@ webpackで画像圧縮も出来るようにした
 * **npm run watch** で↑ 上記の内容を実行 ＆ srcフォルダ監視 ＆ browser-syncでpublicフォルダ内のindex.htmlをブラウザでリアルタイム表示
 * **npm run build** で↑ 上記の内容を実行（jsとcssファイルはminify化）
 * **npm run imagemin** で画像を圧縮（jpg|jpeg|png|gif|svg）（src/images/ → public/images）
+
+<br><br><br>
+
+
+## コマンド一覧
+* **npm run watch**
+* **npm run build**
+* **npm run imagemin**
 
 <br><br><br>
 
