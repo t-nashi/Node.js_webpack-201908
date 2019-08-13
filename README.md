@@ -12,6 +12,15 @@ webpackで画像圧縮も出来るようにした
 * **npm run watch** で↑ 上記の内容を実行 ＆ srcフォルダ監視 ＆ browser-syncでpublicフォルダ内のindex.htmlをブラウザでリアルタイム表示
 * **npm run build** で↑ 上記の内容を実行（jsとcssファイルはminify化）
 * **npm run imagemin** で画像を圧縮（jpg|jpeg|png|gif|svg）（src/images/ → public/images）
+* CSS設計|構成案は[FLOCSS](https://github.com/hiloki/flocss)を採用したsassサンプルを用意
+* └ 命名規則 - ケバブケース（チェインケース）
+* └ 命名規則 - MindBEMding … BEMシステムのシンタックスである、Block、Element、Modifierに分類して構成される規則を採用
+* 
+* 
+* 
+* 
+* 
+* 
 
 <br><br><br>
 
