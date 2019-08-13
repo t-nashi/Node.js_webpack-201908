@@ -4,6 +4,22 @@ webpackで画像圧縮も出来るようにした
 <br><br><br>
 
 
+## 何が出来るのか・
+* sass（SCSS記法）をcssへ変換＆バンドル（src/scss/ → public/css）
+* js の ES6（ES2015 | ECMAScript2015）を ES5 へ変換（Babelでトランスパイラ）＆バンドル（src/js/ → public/js）
+* 画像を圧縮（jpg|jpeg|png|gif|svg）（src/images/ → public/images）
+* 「src/_public-root/index.html → public/index.html」コピー
+* **npm run watch** で↑ 上記の内容を実行 ＆ srcフォルダ監視 ＆ browser-syncでpublicフォルダ内のindex.htmlをブラウザでリアルタイム表示
+* **npm run build** で↑ 上記の内容を実行（jsとcssファイルはminify化）
+* **npm run imagemin** で画像を圧縮（jpg|jpeg|png|gif|svg）（src/images/ → public/images）
+
+<br><br><br>
+
+
+
+
+
+
 ## 使用プラグイン
 **▼ [Node.js_webpack-201902](https://github.com/t-nashi/Node.js_webpack-201902) からインストールされていたもの**
 <table>
