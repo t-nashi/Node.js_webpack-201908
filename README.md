@@ -181,6 +181,18 @@ webpackで画像圧縮も出来るようにした
 			（jpegtran、pngquant、gifsicle、svgo が初期から使える。その他の圧縮は plugins 指定で設定できる）
 		</td>
 	</tr>
+	<tr>
+		<td><b>imagemin-webp</b></td>
+		<td>
+			xxxxxxxxxx
+		</td>
+	</tr>
+	<tr>
+		<td><b>imagemin-webp-webpack-plugin</b></td>
+		<td>
+			xxxxxxxxxx
+		</td>
+	</tr>
 </table>
 
 <br><br><br>
