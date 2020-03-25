@@ -7,6 +7,10 @@ const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");	/
 const CopyWebpackPlugin = require('copy-webpack-plugin');												// ファイルを構造を維持してコピー
 const ImageminPlugin = require('imagemin-webpack-plugin').default;							// 画像圧縮（jpe?g|png|gif|svg）
 const ImageminMozjpeg = require('imagemin-mozjpeg');														// jpg圧縮
+const ImageminWebpWebpackPlugin= require("imagemin-webp-webpack-plugin");
+
+	// "imagemin-webp": "^5.1.0",
+	// "imagemin-webp-webpack-plugin": "^3.3.1",
 
 module.exports = {
 	// webpack4以降はモード指定しなければいけない（production | development | none）
@@ -214,6 +218,20 @@ module.exports = {
 		// 	}],
 		// 	{ context: 'public/css' }
 		// ),
+
+		// // webp画像作成
+		// new ImageminWebpWebpackPlugin({
+		// 	config: [{
+		// 		test: /\.(jpe?g|png)$/i,
+		// 		options: {
+		// 			quality:  75
+		// 		}
+		// 	}],
+		// 	overrideExtension: true,
+		// 	detailedLogs: false,
+		// 	silent: false,
+		// 	strict: true
+		// }),
 
 		// 画像圧縮
 		new ImageminPlugin({
