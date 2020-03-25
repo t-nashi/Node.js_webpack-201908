@@ -28,6 +28,7 @@ webpackで画像圧縮も出来るようにした
 * **npm run watch**
 * **npm run build**
 * **npm run imagemin**
+* **npm run imagemin-webp**
 
 <br><br><br>
 
