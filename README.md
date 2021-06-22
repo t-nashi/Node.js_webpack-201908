@@ -1,6 +1,7 @@
 # Node.js_webpack-201908
-webpackで画像圧縮も出来るようにした
-
+・packageのバージョン更新
+・webpack5対応
+・画像圧縮対応（watch、imagemin、imagemin-webp）
 <br><br><br>
 
 
